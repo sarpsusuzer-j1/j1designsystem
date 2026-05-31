@@ -2,12 +2,10 @@ import './NavBar.css';
 
 const icons = {
   logo: (
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-      <circle cx="16" cy="16" r="13" stroke="#040F0B" strokeWidth="1.5"/>
-      <ellipse cx="16" cy="16" rx="6" ry="13" stroke="#040F0B" strokeWidth="1.5"/>
-      <line x1="3" y1="16" x2="29" y2="16" stroke="#040F0B" strokeWidth="1.5"/>
-      <line x1="5" y1="10" x2="27" y2="10" stroke="#040F0B" strokeWidth="1"/>
-      <line x1="5" y1="22" x2="27" y2="22" stroke="#040F0B" strokeWidth="1"/>
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <circle cx="14" cy="14" r="11" fill="#CDEA68"/>
+      <ellipse cx="14" cy="14" rx="5" ry="11" fill="#0E1612" fillOpacity="0.15"/>
+      <line x1="3" y1="14" x2="25" y2="14" stroke="#0E1612" strokeWidth="1.2" strokeOpacity="0.3"/>
     </svg>
   ),
   house: (
