@@ -146,8 +146,13 @@ const MOCK_DATA: ControlRow[] = [
 const PAGE_SIZE = 10;
 
 const AskAIIcon = () => (
-  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-    <path d="M7 2L8.5 5.5H12L9.25 7.75L10.25 11.5L7 9.25L3.75 11.5L4.75 7.75L2 5.5H5.5L7 2Z" fill="currentColor"/>
+  <svg width="18" height="18" viewBox="0 0 256 256" fill="none">
+    <circle cx="128" cy="128" r="104" fill="#CDEA68"/>
+    <ellipse cx="128" cy="128" rx="44" ry="104" fill="none" stroke="#5C6E22" strokeWidth="10"/>
+    <line x1="24" y1="128" x2="232" y2="128" stroke="#5C6E22" strokeWidth="10"/>
+    <line x1="34" y1="88" x2="222" y2="88" stroke="#5C6E22" strokeWidth="8"/>
+    <line x1="34" y1="168" x2="222" y2="168" stroke="#5C6E22" strokeWidth="8"/>
+    <circle cx="128" cy="128" r="104" fill="none" stroke="#5C6E22" strokeWidth="10"/>
   </svg>
 );
 
