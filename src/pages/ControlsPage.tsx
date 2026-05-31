@@ -146,13 +146,17 @@ const MOCK_DATA: ControlRow[] = [
 const PAGE_SIZE = 10;
 
 const AskAIIcon = () => (
-  <svg width="18" height="18" viewBox="0 0 256 256" fill="none">
-    <circle cx="128" cy="128" r="104" fill="#CDEA68"/>
-    <ellipse cx="128" cy="128" rx="44" ry="104" fill="none" stroke="#5C6E22" strokeWidth="10"/>
-    <line x1="24" y1="128" x2="232" y2="128" stroke="#5C6E22" strokeWidth="10"/>
-    <line x1="34" y1="88" x2="222" y2="88" stroke="#5C6E22" strokeWidth="8"/>
-    <line x1="34" y1="168" x2="222" y2="168" stroke="#5C6E22" strokeWidth="8"/>
-    <circle cx="128" cy="128" r="104" fill="none" stroke="#5C6E22" strokeWidth="10"/>
+  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Planet body */}
+    <circle cx="11" cy="11" r="8.5" fill="#CDEA68"/>
+    {/* Darker band across middle */}
+    <ellipse cx="11" cy="13" rx="8.5" ry="4" fill="#A8C840" opacity="0.5"/>
+    {/* Highlight */}
+    <ellipse cx="9" cy="7.5" rx="3" ry="2" fill="white" opacity="0.45" transform="rotate(-20 9 7.5)"/>
+    {/* Orbital ring */}
+    <ellipse cx="11" cy="11" rx="13" ry="4.5" fill="none" stroke="#7BA020" strokeWidth="1.5" transform="rotate(-25 11 11)"/>
+    {/* Ring overlap on top of planet (front arc) */}
+    <path d="M3.5 7.5 Q11 6 18.5 8" stroke="#CDEA68" strokeWidth="2.2" fill="none"/>
   </svg>
 );
 

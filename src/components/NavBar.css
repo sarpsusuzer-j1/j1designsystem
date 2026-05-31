@@ -23,6 +23,10 @@
   flex-shrink: 0;
 }
 
+.navbar-logo svg {
+  display: block;
+}
+
 .navbar-items {
   display: flex;
   flex-direction: column;
