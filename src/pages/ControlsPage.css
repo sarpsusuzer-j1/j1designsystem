@@ -1,75 +1,102 @@
 .controls-page {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 32px 32px 32px;
+  gap: 0;
   height: 100%;
   overflow-y: auto;
+  background: #ffffff;
 }
 
+/* Page Content Header */
 .controls-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.controls-header__left {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  height: 64px;
+  padding: 16px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #D8DAD9;
+  flex-shrink: 0;
 }
 
 .controls-title {
   font-size: 18px;
-  font-weight: var(--font-weight-semibold);
-  color: var(--eclipse-600);
+  font-weight: 500;
+  color: #1F2622;
   font-family: var(--font-family);
+  margin: 0;
+  line-height: 1;
 }
 
 .ask-ai-pill {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  height: 28px;
-  padding: 0 10px;
-  border-radius: var(--radius-full);
-  border: 1px solid var(--neutral-border);
-  background: var(--neutral-white);
+  gap: 6px;
+  height: 32px;
+  padding-left: 10px;
+  padding-right: 12px;
+  border-radius: 200px;
+  border: 1px solid #F1FFBD;
+  background: #ffffff;
   font-family: var(--font-family);
-  font-size: 12px;
-  font-weight: var(--font-weight-medium);
-  color: var(--eclipse-400);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #5C6E22;
   cursor: pointer;
   transition: background 0.15s;
+  white-space: nowrap;
 }
 
 .ask-ai-pill:hover {
-  background: var(--eclipse-50);
+  background: #F1FFBD;
 }
 
-.controls-stats {
-  display: flex;
-  gap: 12px;
-}
-
-.controls-toolbar {
+/* Toolbar Row */
+.controls-toolbar-row {
   display: flex;
   align-items: center;
-  gap: 12px;
-}
-
-.controls-toolbar__left {
+  justify-content: space-between;
+  height: 56px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #D8DAD9;
   flex-shrink: 0;
 }
 
-.controls-toolbar__search {
-  flex: 1;
-  max-width: 320px;
+/* Stat cards */
+.controls-stats {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #D8DAD9;
+  flex-shrink: 0;
 }
 
+/* Filter + Search row */
+.controls-filter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 8px 20px;
+  border-bottom: 1px solid #D8DAD9;
+  flex-shrink: 0;
+}
+
+.controls-search {
+  width: 420px;
+}
+
+/* Table section */
+.controls-table-section {
+  padding: 20px;
+  flex: 1;
+}
+
+/* Pagination */
 .controls-pagination {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-top: 4px;
+  padding: 12px 20px 20px;
+  flex-shrink: 0;
 }

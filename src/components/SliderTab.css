@@ -1,33 +1,40 @@
 .slider-tab {
   display: inline-flex;
   align-items: center;
-  background: var(--eclipse-50);
-  border-radius: var(--radius-full);
-  padding: 3px;
-  gap: 2px;
+  background: #F1F2F1;
+  border-radius: 10px;
+  padding: 2px;
+  gap: 4px;
+  box-sizing: border-box;
 }
 
 .slider-tab__item {
-  height: 34px;
-  padding: 0 16px;
-  border-radius: var(--radius-full);
+  height: 32px;
+  width: 156px;
+  padding: 0 14px;
+  border-radius: 9999px;
   border: none;
   background: transparent;
-  color: var(--eclipse-400);
+  color: #828987;
   font-family: var(--font-family);
   font-size: 14px;
-  font-weight: var(--font-weight-medium);
+  font-weight: 500;
   cursor: pointer;
   transition: background 0.15s, color 0.15s;
   white-space: nowrap;
+  box-sizing: border-box;
 }
 
-.slider-tab__item:hover {
-  color: var(--eclipse-600);
+.slider-tab__item:hover:not(.slider-tab__item--active) {
+  color: #1F2622;
 }
 
 .slider-tab__item--active {
-  background: var(--neutral-white);
-  color: var(--eclipse-600);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  background: #ffffff;
+  color: #0E1612;
+  border-radius: 8px;
+  border: 1px solid #B0B4B2;
+  height: 36px;
+  box-shadow: var(--shadow-card);
+  font-weight: 500;
 }

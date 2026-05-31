@@ -24,23 +24,22 @@ interface TableProps {
 
 function StatusBadge({ status }: { status: ControlRow['status'] }) {
   if (!status) return null;
-  if (status === 'pass') return <Badge variant="success-tinted" label="Pass" />;
-  return <Badge variant="danger-tinted" label="Fail" />;
+  if (status === 'pass') return <Badge variant="pass" />;
+  return <Badge variant="fail" />;
 }
 
 function StateBadge({ state }: { state: ControlRow['state'] }) {
-  if (state === 'live') return <Badge variant="success-tinted" label="Live" />;
-  return <Badge variant="default-outline" label="Draft" />;
+  if (state === 'live') return <Badge variant="live" />;
+  return <Badge variant="draft" />;
 }
 
 function EffectiveBadge({ effectiveStatus }: { effectiveStatus: ControlRow['effectiveStatus'] }) {
   if (!effectiveStatus) return null;
-  const map: Record<string, { variant: BadgeVariant; label: string }> = {
-    'no-datapoints': { variant: 'warning-tinted', label: 'No Datapoints' },
-    'no-tests': { variant: 'warning-solid', label: 'No Tests' },
+  const map: Record<string, BadgeVariant> = {
+    'no-datapoints': 'no-datapoints',
+    'no-tests': 'no-tests',
   };
-  const cfg = map[effectiveStatus];
-  return <Badge variant={cfg.variant} label={cfg.label} />;
+  return <Badge variant={map[effectiveStatus]} />;
 }
 
 export function Table({ rows, selectedIds, onSelectAll, onSelectRow }: TableProps) {

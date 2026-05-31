@@ -9,25 +9,145 @@ import type { ControlRow } from '../components/Table';
 import { Pagination } from '../components/Pagination';
 
 const MOCK_DATA: ControlRow[] = [
-  { id: '1', identifier: 'CC-001', name: 'Access Control Policy', owner: 'security-team', catalog: 'SOC 2', status: 'pass', state: 'live', effectiveStatus: null, evaluated: '2 days ago' },
-  { id: '2', identifier: 'CC-002', name: 'Multi-Factor Authentication Enforcement', owner: 'identity-team', catalog: 'ISO 27001', status: 'fail', state: 'live', effectiveStatus: 'no-tests', evaluated: '5 hours ago' },
-  { id: '3', identifier: 'CC-003', name: 'Data Encryption at Rest', owner: 'platform-team', catalog: 'PCI DSS', status: 'fail', state: 'live', effectiveStatus: null, evaluated: '1 day ago' },
-  { id: '4', identifier: 'CC-004', name: 'Vulnerability Management Program', owner: 'security-team', catalog: 'NIST CSF', status: null, state: 'draft', effectiveStatus: 'no-datapoints', evaluated: null },
-  { id: '5', identifier: 'CC-005', name: 'Incident Response Procedure', owner: 'security-team', catalog: 'SOC 2', status: 'fail', state: 'live', effectiveStatus: null, evaluated: '3 days ago' },
-  { id: '6', identifier: 'CC-006', name: 'Change Management Process', owner: 'engineering', catalog: 'ISO 27001', status: 'pass', state: 'live', effectiveStatus: null, evaluated: '6 hours ago' },
-  { id: '7', identifier: 'CC-007', name: 'Third Party Risk Assessment', owner: 'legal-team', catalog: 'SOC 2', status: 'fail', state: 'live', effectiveStatus: 'no-tests', evaluated: '1 week ago' },
-  { id: '8', identifier: 'CC-008', name: 'Business Continuity Planning', owner: 'operations', catalog: 'ISO 22301', status: null, state: 'draft', effectiveStatus: 'no-datapoints', evaluated: null },
-  { id: '9', identifier: 'CC-009', name: 'Privileged Access Management', owner: 'identity-team', catalog: 'CIS Controls', status: 'fail', state: 'live', effectiveStatus: null, evaluated: '12 hours ago' },
-  { id: '10', identifier: 'CC-010', name: 'Security Awareness Training', owner: 'hr-team', catalog: 'NIST CSF', status: 'pass', state: 'live', effectiveStatus: null, evaluated: '4 days ago' },
-  { id: '11', identifier: 'CC-011', name: 'Network Segmentation Controls', owner: 'platform-team', catalog: 'PCI DSS', status: 'fail', state: 'live', effectiveStatus: null, evaluated: '2 hours ago' },
-  { id: '12', identifier: 'CC-012', name: 'Audit Log Retention Policy', owner: 'security-team', catalog: 'SOC 2', status: 'fail', state: 'live', effectiveStatus: 'no-tests', evaluated: '8 hours ago' },
+  {
+    id: '1',
+    identifier: 'CSF-DE-01',
+    name: '(Manual Verification) DE.AE-03: Information is correlated from multiple sources',
+    owner: 'Sarp Susuzer',
+    catalog: 'JupiterOne',
+    status: 'pass',
+    state: 'live',
+    effectiveStatus: null,
+    evaluated: '2 days ago',
+  },
+  {
+    id: '2',
+    identifier: 'CSF-DE-02',
+    name: '(Manual Verification) DE.AE-04: The estimated impact and scope of adverse events are understood',
+    owner: 'Sarp Susuzer',
+    catalog: 'CIS Controls V8',
+    status: 'fail',
+    state: 'live',
+    effectiveStatus: 'no-tests',
+    evaluated: '5 hours ago',
+  },
+  {
+    id: '3',
+    identifier: 'CSF-DE-03',
+    name: '(Manual Verification) DE.CM-01: Networks and network services are monitored',
+    owner: 'Sarp Susuzer',
+    catalog: 'JupiterOne',
+    status: 'fail',
+    state: 'live',
+    effectiveStatus: null,
+    evaluated: '1 day ago',
+  },
+  {
+    id: '4',
+    identifier: 'CSF-DE-04',
+    name: '(Manual Verification) DE.CM-02: The physical environment is monitored',
+    owner: 'Sarp Susuzer',
+    catalog: 'CIS Controls V8',
+    status: null,
+    state: 'draft',
+    effectiveStatus: 'no-datapoints',
+    evaluated: null,
+  },
+  {
+    id: '5',
+    identifier: 'CSF-DE-05',
+    name: '(Manual Verification) DE.CM-03: Personnel activity and technology usage are monitored',
+    owner: 'Sarp Susuzer',
+    catalog: 'JupiterOne',
+    status: 'fail',
+    state: 'live',
+    effectiveStatus: null,
+    evaluated: '3 days ago',
+  },
+  {
+    id: '6',
+    identifier: 'CSF-DE-06',
+    name: '(Manual Verification) DE.CM-06: External service provider activities are monitored',
+    owner: 'Sarp Susuzer',
+    catalog: 'CIS Controls V8',
+    status: 'pass',
+    state: 'live',
+    effectiveStatus: null,
+    evaluated: '6 hours ago',
+  },
+  {
+    id: '7',
+    identifier: 'CSF-DE-07',
+    name: '(Manual Verification) DE.CM-07: Monitoring for unauthorized personnel, connections, and software',
+    owner: 'Sarp Susuzer',
+    catalog: 'JupiterOne',
+    status: 'fail',
+    state: 'live',
+    effectiveStatus: 'no-tests',
+    evaluated: '1 week ago',
+  },
+  {
+    id: '8',
+    identifier: 'CSF-DE-08',
+    name: '(Manual Verification) DE.CM-09: Computing hardware and software are monitored',
+    owner: 'Sarp Susuzer',
+    catalog: 'CIS Controls V8',
+    status: null,
+    state: 'draft',
+    effectiveStatus: 'no-datapoints',
+    evaluated: null,
+  },
+  {
+    id: '9',
+    identifier: 'CSF-DE-09',
+    name: '(Manual Verification) DE.DP-01: Roles and responsibilities for detection are defined',
+    owner: 'Sarp Susuzer',
+    catalog: 'JupiterOne',
+    status: 'fail',
+    state: 'live',
+    effectiveStatus: null,
+    evaluated: '12 hours ago',
+  },
+  {
+    id: '10',
+    identifier: 'CSF-DE-10',
+    name: '(Manual Verification) DE.DP-02: Detection activities comply with applicable requirements',
+    owner: 'Sarp Susuzer',
+    catalog: 'CIS Controls V8',
+    status: 'pass',
+    state: 'live',
+    effectiveStatus: null,
+    evaluated: '4 days ago',
+  },
+  {
+    id: '11',
+    identifier: 'CSF-DE-11',
+    name: '(Manual Verification) DE.DP-04: Event detection information is communicated',
+    owner: 'Sarp Susuzer',
+    catalog: 'JupiterOne',
+    status: 'fail',
+    state: 'live',
+    effectiveStatus: null,
+    evaluated: '2 hours ago',
+  },
+  {
+    id: '12',
+    identifier: 'CSF-DE-12',
+    name: '(Manual Verification) DE.DP-05: Detection processes are continuously improved',
+    owner: 'Sarp Susuzer',
+    catalog: 'CIS Controls V8',
+    status: 'fail',
+    state: 'live',
+    effectiveStatus: 'no-tests',
+    evaluated: '8 hours ago',
+  },
 ];
 
 const PAGE_SIZE = 10;
 
-const PlusIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-    <path d="M8 3V13M3 8H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+const AskAIIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+    <path d="M7 2L8.5 5.5H12L9.25 7.75L10.25 11.5L7 9.25L3.75 11.5L4.75 7.75L2 5.5H5.5L7 2Z" fill="currentColor"/>
   </svg>
 );
 
@@ -44,41 +164,40 @@ const SearchIcon = () => (
   </svg>
 );
 
+const PlusIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <path d="M8 3V13M3 8H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+  </svg>
+);
+
 const HealthIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-    <path d="M10 3a7 7 0 100 14A7 7 0 0010 3z" stroke="#065F46" strokeWidth="1.5"/>
-    <path d="M7 10l2 2 4-4" stroke="#065F46" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+    <circle cx="11" cy="11" r="8" stroke="#0A6643" strokeWidth="1.5"/>
+    <path d="M7.5 11l2.5 2.5 4.5-5" stroke="#0A6643" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
 const FailIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-    <path d="M10 3a7 7 0 100 14A7 7 0 0010 3z" stroke="#991B1B" strokeWidth="1.5"/>
-    <path d="M7.5 7.5l5 5M12.5 7.5l-5 5" stroke="#991B1B" strokeWidth="1.5" strokeLinecap="round"/>
+  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+    <circle cx="11" cy="11" r="8" stroke="#8A2014" strokeWidth="1.5"/>
+    <path d="M8 8l6 6M14 8l-6 6" stroke="#8A2014" strokeWidth="1.5" strokeLinecap="round"/>
   </svg>
 );
 
 const PriorityIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-    <path d="M10 3L2 17H18L10 3Z" stroke="#92400E" strokeWidth="1.5" strokeLinejoin="round"/>
-    <path d="M10 8v4" stroke="#92400E" strokeWidth="1.5" strokeLinecap="round"/>
-    <circle cx="10" cy="14" r="0.75" fill="#92400E"/>
+  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+    <path d="M11 3L3 19H19L11 3Z" stroke="#A6320A" strokeWidth="1.5" strokeLinejoin="round"/>
+    <path d="M11 9v4" stroke="#A6320A" strokeWidth="1.5" strokeLinecap="round"/>
+    <circle cx="11" cy="15" r="0.75" fill="#A6320A"/>
   </svg>
 );
 
 const FrameworkIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-    <rect x="3" y="3" width="6" height="6" rx="1" stroke="#374151" strokeWidth="1.5"/>
-    <rect x="11" y="3" width="6" height="6" rx="1" stroke="#374151" strokeWidth="1.5"/>
-    <rect x="3" y="11" width="6" height="6" rx="1" stroke="#374151" strokeWidth="1.5"/>
-    <rect x="11" y="11" width="6" height="6" rx="1" stroke="#374151" strokeWidth="1.5"/>
-  </svg>
-);
-
-const AskAIIcon = () => (
-  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-    <path d="M7 1.5C4 1.5 1.5 4 1.5 7S4 12.5 7 12.5 12.5 10 12.5 7 10 1.5 7 1.5Z" stroke="currentColor" strokeWidth="1.25"/>
-    <path d="M5 7h4M7 5v4" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round"/>
+  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+    <rect x="3" y="3" width="6" height="6" rx="1" stroke="#828987" strokeWidth="1.5"/>
+    <rect x="13" y="3" width="6" height="6" rx="1" stroke="#828987" strokeWidth="1.5"/>
+    <rect x="3" y="13" width="6" height="6" rx="1" stroke="#828987" strokeWidth="1.5"/>
+    <rect x="13" y="13" width="6" height="6" rx="1" stroke="#828987" strokeWidth="1.5"/>
   </svg>
 );
 
@@ -112,22 +231,17 @@ export function ControlsPage() {
 
   return (
     <div className="controls-page">
-      {/* Page header */}
+      {/* Page Content Header */}
       <div className="controls-header">
-        <div className="controls-header__left">
-          <h1 className="controls-title">Controls</h1>
-          <button className="ask-ai-pill">
-            <AskAIIcon />
-            Ask AI
-          </button>
-        </div>
-        <Button variant="black-40" icon={<PlusIcon />}>
-          Create New Control
-        </Button>
+        <h1 className="controls-title">Controls</h1>
+        <button className="ask-ai-pill">
+          <AskAIIcon />
+          <span>Ask AI</span>
+        </button>
       </div>
 
-      {/* Tabs */}
-      <div className="controls-tabs">
+      {/* Toolbar Row: tabs left, create button right */}
+      <div className="controls-toolbar-row">
         <SliderTab
           tabs={[
             { label: 'All Controls', value: 'all' },
@@ -136,42 +250,43 @@ export function ControlsPage() {
           active={activeTab}
           onChange={setActiveTab}
         />
+        <Button variant="black" icon={<PlusIcon />}>
+          Create New Control
+        </Button>
       </div>
 
       {/* Stat cards */}
       <div className="controls-stats">
         <SummaryCard
-          value="26%"
-          label="Healthy controls"
+          value="26% healthy"
+          label="Overall controls status"
           icon={<HealthIcon />}
-          iconBg="#ECFDF5"
+          iconBg="#F1F2F1"
         />
         <SummaryCard
           value="80"
           label="Failing controls"
           icon={<FailIcon />}
-          iconBg="#FEF2F2"
+          iconBg="#F1F2F1"
         />
         <SummaryCard
           value="10"
-          label="High priority"
+          label="High priority failing"
           icon={<PriorityIcon />}
-          iconBg="#FFF7ED"
+          iconBg="#F1F2F1"
         />
         <SummaryCard
           value="10"
-          label="Frameworks"
+          label="Impacted frameworks"
           icon={<FrameworkIcon />}
           iconBg="#F1F2F1"
         />
       </div>
 
       {/* Filter + Search row */}
-      <div className="controls-toolbar">
-        <div className="controls-toolbar__left">
-          <Button variant="outline-40" icon={<FilterIcon />}>Filters</Button>
-        </div>
-        <div className="controls-toolbar__search">
+      <div className="controls-filter-row">
+        <Button variant="outline" icon={<FilterIcon />}>Filters</Button>
+        <div className="controls-search">
           <Input
             placeholder="Search controls..."
             value={search}
@@ -182,12 +297,14 @@ export function ControlsPage() {
       </div>
 
       {/* Table */}
-      <Table
-        rows={pageRows}
-        selectedIds={selectedIds}
-        onSelectAll={handleSelectAll}
-        onSelectRow={handleSelectRow}
-      />
+      <div className="controls-table-section">
+        <Table
+          rows={pageRows}
+          selectedIds={selectedIds}
+          onSelectAll={handleSelectAll}
+          onSelectRow={handleSelectRow}
+        />
+      </div>
 
       {/* Pagination */}
       <div className="controls-pagination">

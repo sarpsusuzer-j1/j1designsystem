@@ -1,9 +1,9 @@
 .table-wrapper {
   width: 100%;
   overflow-x: auto;
-  border: 1px solid var(--neutral-border);
-  border-radius: var(--radius-8);
-  background: var(--neutral-white);
+  border: 1px solid #D8DAD9;
+  border-radius: 12px;
+  background: #ffffff;
 }
 
 .table {
@@ -14,25 +14,25 @@
 
 /* Column widths */
 .table-th--identifier,
-.table-td--identifier { width: 138px; }
+.table-td--identifier { width: 148px; }
 .table-th--name,
 .table-td--name { /* FILL — takes remaining space */ }
 .table-th--owner,
 .table-td--owner { width: 150px; }
 .table-th--catalog,
-.table-td--catalog { width: 128px; }
+.table-td--catalog { width: 140px; }
 .table-th--status,
-.table-td--status { width: 100px; }
+.table-td--status { width: 90px; }
 .table-th--state,
-.table-td--state { width: 100px; }
+.table-td--state { width: 80px; }
 .table-th--effective,
-.table-td--effective { width: 180px; }
+.table-td--effective { width: 170px; }
 .table-th--evaluated,
 .table-td--evaluated { width: 130px; }
 
 .table-header-row {
-  background: var(--neutral-bg);
-  border-bottom: 1px solid var(--neutral-border);
+  background: #FAFAFA;
+  border-bottom: 1px solid #D8DAD9;
 }
 
 .table-th {
@@ -40,8 +40,8 @@
   height: 40px;
   text-align: left;
   font-size: 12px;
-  font-weight: var(--font-weight-medium);
-  color: var(--eclipse-300);
+  font-weight: 500;
+  color: #828987;
   font-family: var(--font-family);
   white-space: nowrap;
   overflow: hidden;
@@ -55,7 +55,7 @@
 }
 
 .table-row {
-  border-bottom: 1px solid var(--neutral-border);
+  border-bottom: 1px solid #D8DAD9;
   transition: background 0.1s;
 }
 
@@ -64,18 +64,19 @@
 }
 
 .table-row:hover {
-  background: var(--eclipse-50);
+  background: #F1F2F1;
 }
 
 .table-row--selected {
-  background: var(--eclipse-50);
+  background: #F1F2F1;
 }
 
 .table-td {
   padding: 0 12px;
-  height: 52px;
+  height: 44px;
   font-size: 13px;
-  color: var(--eclipse-400);
+  font-weight: 400;
+  color: #5A615E;
   font-family: var(--font-family);
   vertical-align: middle;
   overflow: hidden;
@@ -89,8 +90,8 @@
 
 .table-identifier {
   font-size: 12px;
-  color: var(--eclipse-400);
-  font-weight: var(--font-weight-medium);
+  color: #5A615E;
+  font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -101,11 +102,12 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: var(--eclipse-600);
-  font-weight: var(--font-weight-medium);
+  color: #1F2622;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .table-td--muted {
-  color: var(--eclipse-300);
-  font-size: 12px;
+  color: #5A615E;
+  font-size: 13px;
 }

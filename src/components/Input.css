@@ -2,39 +2,42 @@
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .input-prefix {
   position: absolute;
-  left: 12px;
+  left: 14px;
   display: flex;
   align-items: center;
-  color: var(--eclipse-300);
+  color: #828987;
   pointer-events: none;
 }
 
 .input {
   height: 40px;
-  padding: 0 12px;
-  border: 1px solid var(--neutral-border);
-  border-radius: var(--radius-6);
-  background: var(--neutral-white);
+  padding: 0 14px;
+  border: 1px solid #D8DAD9;
+  border-radius: 12px;
+  background: #ffffff;
   font-family: var(--font-family);
   font-size: 14px;
-  color: var(--eclipse-600);
+  font-weight: 400;
+  color: #1F2622;
   outline: none;
   transition: border-color 0.15s;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .input--has-prefix {
-  padding-left: 36px;
+  padding-left: 38px;
 }
 
 .input::placeholder {
-  color: var(--eclipse-300);
+  color: #5A615E;
 }
 
 .input:focus {
-  border-color: var(--eclipse-400);
+  border-color: #5A615E;
 }

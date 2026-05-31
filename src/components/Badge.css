@@ -1,42 +1,80 @@
 .badge {
   display: inline-flex;
   align-items: center;
-  height: 22px;
-  padding: 0 8px;
-  border-radius: var(--radius-full);
-  font-size: 12px;
-  font-weight: var(--font-weight-medium);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 500;
   font-family: var(--font-family);
   white-space: nowrap;
   border: 1px solid transparent;
+  line-height: 1;
 }
 
+/* Figma-exact variants */
+.badge--pass {
+  background: #E7F6EE;
+  color: #0A6643;
+  border-color: transparent;
+}
+
+.badge--fail {
+  background: #FCEAE7;
+  color: #8A2014;
+  border-color: transparent;
+}
+
+.badge--live {
+  background: #ffffff;
+  color: #0E1612;
+  border-color: #828987;
+}
+
+.badge--draft {
+  background: #ffffff;
+  color: #0E1612;
+  border-color: #828987;
+}
+
+.badge--no-datapoints {
+  background: #FFEDE5;
+  color: #A6320A;
+  border-color: transparent;
+}
+
+.badge--no-tests {
+  background: #FF5D2E;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+/* Legacy aliases */
 .badge--success-tinted {
-  background: var(--success-bg);
-  color: var(--success-text);
-  border-color: var(--success-border);
+  background: #E7F6EE;
+  color: #0A6643;
+  border-color: transparent;
 }
 
 .badge--danger-tinted {
-  background: var(--danger-bg);
-  color: var(--danger-text);
-  border-color: var(--danger-border);
+  background: #FCEAE7;
+  color: #8A2014;
+  border-color: transparent;
 }
 
 .badge--default-outline {
-  background: var(--default-bg);
-  color: var(--default-text);
-  border-color: var(--default-border);
+  background: #ffffff;
+  color: #0E1612;
+  border-color: #828987;
 }
 
 .badge--warning-solid {
-  background: var(--warning-solid-bg);
-  color: var(--warning-solid-text);
+  background: #FF5D2E;
+  color: #ffffff;
   border-color: transparent;
 }
 
 .badge--warning-tinted {
-  background: var(--warning-bg);
-  color: var(--warning-text);
-  border-color: var(--warning-border);
+  background: #FFEDE5;
+  color: #A6320A;
+  border-color: transparent;
 }

@@ -16,7 +16,7 @@ export function Checkbox({ checked = false, indeterminate = false, onChange }: C
         ref={(el) => { if (el) el.indeterminate = indeterminate; }}
         onChange={(e) => onChange?.(e.target.checked)}
       />
-      <span className="checkbox__box">
+      <span className={`checkbox__box ${checked || indeterminate ? 'checkbox__box--checked' : ''}`}>
         {indeterminate && (
           <svg width="10" height="2" viewBox="0 0 10 2" fill="none">
             <path d="M1 1H9" stroke="white" strokeWidth="2" strokeLinecap="round"/>

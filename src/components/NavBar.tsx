@@ -2,61 +2,70 @@ import './NavBar.css';
 
 const icons = {
   logo: (
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-      <rect width="28" height="28" rx="6" fill="#3DDC84"/>
-      <path d="M7 14L11.5 9L16 14L11.5 19L7 14Z" fill="#040F0B"/>
-      <path d="M14 14L18.5 9L23 14L18.5 19L14 14Z" fill="#040F0B" opacity="0.5"/>
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+      <circle cx="16" cy="16" r="13" stroke="#040F0B" strokeWidth="1.5"/>
+      <ellipse cx="16" cy="16" rx="6" ry="13" stroke="#040F0B" strokeWidth="1.5"/>
+      <line x1="3" y1="16" x2="29" y2="16" stroke="#040F0B" strokeWidth="1.5"/>
+      <line x1="5" y1="10" x2="27" y2="10" stroke="#040F0B" strokeWidth="1"/>
+      <line x1="5" y1="22" x2="27" y2="22" stroke="#040F0B" strokeWidth="1"/>
     </svg>
   ),
-  home: (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-      <path d="M2.5 7.5L10 2.5L17.5 7.5V17.5H12.5V12.5H7.5V17.5H2.5V7.5Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+  house: (
+    <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+      <path d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11-79.95,75.48A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V160h32v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77ZM208,208H160V160a16,16,0,0,0-16-16H112a16,16,0,0,0-16,16v48H48V115.55l.11-.1L128,40l79.9,75.43.1.12Z"/>
     </svg>
   ),
-  shield: (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-      <path d="M10 2L3 5V10C3 13.87 6.13 17.5 10 18.5C13.87 17.5 17 13.87 17 10V5L10 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+  monitor: (
+    <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+      <path d="M208,40H48A24,24,0,0,0,24,64V176a24,24,0,0,0,24,24H208a24,24,0,0,0,24-24V64A24,24,0,0,0,208,40Zm8,136a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V64a8,8,0,0,1,8-8H208a8,8,0,0,1,8,8ZM160,224a8,8,0,0,1-8,8H104a8,8,0,0,1,0-16h48A8,8,0,0,1,160,224Z"/>
     </svg>
   ),
-  graph: (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-      <circle cx="5" cy="15" r="2" stroke="currentColor" strokeWidth="1.5"/>
-      <circle cx="10" cy="5" r="2" stroke="currentColor" strokeWidth="1.5"/>
-      <circle cx="15" cy="10" r="2" stroke="currentColor" strokeWidth="1.5"/>
-      <path d="M6.5 13.5L8.5 7M11.5 6.5L13.5 9" stroke="currentColor" strokeWidth="1.5"/>
+  cube: (
+    <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+      <path d="M223.68,66.15,135.68,18a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32l80.35,44L128,120,47.65,76ZM40,90l80,43.78v85.79L40,175.82Zm96,129.57V133.82L216,90v85.82Z"/>
     </svg>
   ),
-  alert: (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-      <path d="M10 2L2 17H18L10 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
-      <path d="M10 8V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-      <circle cx="10" cy="14" r="0.75" fill="currentColor"/>
+  bell: (
+    <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+      <path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.63-16h45.26A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"/>
     </svg>
   ),
-  controls: (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-      <rect x="2" y="4" width="16" height="2.5" rx="1.25" stroke="currentColor" strokeWidth="1.5"/>
-      <rect x="2" y="9" width="16" height="2.5" rx="1.25" stroke="currentColor" strokeWidth="1.5"/>
-      <rect x="2" y="14" width="16" height="2.5" rx="1.25" stroke="currentColor" strokeWidth="1.5"/>
-      <circle cx="7" cy="5.25" r="1.5" fill="var(--eclipse-700)" stroke="currentColor" strokeWidth="1.5"/>
-      <circle cx="13" cy="10.25" r="1.5" fill="var(--eclipse-700)" stroke="currentColor" strokeWidth="1.5"/>
-      <circle cx="7" cy="15.25" r="1.5" fill="var(--eclipse-700)" stroke="currentColor" strokeWidth="1.5"/>
+  sliders: (
+    <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+      <path d="M40,88H73a32,32,0,0,0,62,0H216a8,8,0,0,0,0-16H135a32,32,0,0,0-62,0H40a8,8,0,0,0,0,16Zm64-24A16,16,0,1,1,88,80,16,16,0,0,1,104,64ZM216,168H183a32,32,0,0,0-62,0H40a8,8,0,0,0,0,16H121a32,32,0,0,0,62,0h33a8,8,0,0,0,0-16Zm-64,24a16,16,0,1,1,16-16A16,16,0,0,1,152,192Z"/>
     </svg>
   ),
-  settings: (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-      <circle cx="10" cy="10" r="3" stroke="currentColor" strokeWidth="1.5"/>
-      <path d="M10 2V4M10 16V18M2 10H4M16 10H18M4.1 4.1L5.5 5.5M14.5 14.5L15.9 15.9M4.1 15.9L5.5 14.5M14.5 5.5L15.9 4.1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+  plugs: (
+    <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+      <path d="M229.66,218.34l-42.07-42.06a88.21,88.21,0,0,0,12.2-17.22l.43-.85a8,8,0,0,0-14.44-6.86l-.42.86a72,72,0,0,1-10.42,14.94L134.83,127l49.6-49.6a8,8,0,0,0,0-11.31L166.91,48.57a8,8,0,0,0-11.31,0L144,60.17,128,44.18a8,8,0,0,0-11.31,0L100.57,60.29a8,8,0,0,0,0,11.32L116.57,87.6,68.23,136l-16-16.06a8,8,0,0,0-11.31,0L24.77,136.06a8,8,0,0,0,0,11.31L40.8,163.4,26.34,177.86a8,8,0,0,0,11.32,11.31L52.11,174.7l16,16a8,8,0,0,0,11.31,0l16.12-16.12a8,8,0,0,0,0-11.31L79.6,147.36l48.3-48.3,40.2,40.21a72.31,72.31,0,0,1-14.87,10.38l-.85.42a8,8,0,0,0,6.86,14.44l.85-.43a88,88,0,0,0,17.15-12.18l42,42a8,8,0,0,0,11.32-11.31ZM106.57,72l5.66-5.65L128,82.1l-5.66,5.65ZM69.77,163.4l-9.94-9.94,4.8-4.8,9.95,9.94Zm72-106.89,22.63,22.63L116.57,126.9,94,104.28Z"/>
+    </svg>
+  ),
+  warning: (
+    <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+      <path d="M236.8,188.09,149.35,36.22a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM120,104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm8,88a12,12,0,1,1,12-12A12,12,0,0,1,128,192Z"/>
+    </svg>
+  ),
+  gitBranch: (
+    <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+      <path d="M208,112a32.06,32.06,0,0,0-30.7,23H136a24,24,0,0,1-24-24V87.31a32,32,0,1,0-16,0v23.38A40,40,0,0,0,136,151h41.3A32,32,0,1,0,208,112ZM80,56A16,16,0,1,1,96,72,16,16,0,0,1,80,56Zm128,112a16,16,0,1,1,16-16A16,16,0,0,1,208,168Z"/>
+    </svg>
+  ),
+  gear: (
+    <svg width="22" height="22" viewBox="0 0 256 256" fill="currentColor">
+      <path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48,107.21,107.21,0,0,0-26.25,10.88,8,8,0,0,0-3.93,6l-2.64,23.72q-1.56,1.48-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.49,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15l-17.92-2a8,8,0,0,0-5.66,1.61q-2.58,2.05-5.35,3.81a8,8,0,0,0-3.48,4.9l-2.51,22.58a91.32,91.32,0,0,1-14.94,6.2l-16.89-13.55a8,8,0,0,0-5-1.75q-2.27.06-4.56,0a8,8,0,0,0-5,1.75L107.58,235.8a91.57,91.57,0,0,1-15-6.23l-2-17.92a8,8,0,0,0-1.61-5.66q-2.05-2.58-3.81-5.35a8,8,0,0,0-4.9-3.48L58.72,194.65a91.32,91.32,0,0,1-6.2-14.94l13.55-16.89A8,8,0,0,0,67.82,158q-.06-2.27,0-4.56a8,8,0,0,0-1.75-5L52.2,131.58a91.57,91.57,0,0,1,6.23-15l17.92,2a8,8,0,0,0,5.66-1.61q2.58-2.06,5.35-3.81a8,8,0,0,0,3.48-4.9l2.51-22.58a91.32,91.32,0,0,1,14.94-6.2l16.89,13.55a8,8,0,0,0,5,1.75q2.27-.06,4.56,0a8,8,0,0,0,5-1.75L148.42,79.2a91.57,91.57,0,0,1,15,6.23l2,17.92a8,8,0,0,0,1.61,5.66q2.05,2.58,3.81,5.35a8,8,0,0,0,4.9,3.48l22.58,2.51a91.32,91.32,0,0,1,6.2,14.94l-13.55,16.89A8,8,0,0,0,199.9,123.66Z"/>
     </svg>
   ),
 };
 
 const navItems = [
-  { icon: 'home', label: 'Home' },
-  { icon: 'graph', label: 'Assets' },
-  { icon: 'alert', label: 'Alerts' },
-  { icon: 'controls', label: 'Controls', active: true },
-  { icon: 'shield', label: 'Compliance' },
+  { icon: 'house', label: 'Home' },
+  { icon: 'monitor', label: 'Assets' },
+  { icon: 'cube', label: 'Catalog' },
+  { icon: 'bell', label: 'Alerts' },
+  { icon: 'sliders', label: 'Controls', active: true },
+  { icon: 'plugs', label: 'Integrations' },
+  { icon: 'warning', label: 'Findings' },
+  { icon: 'gitBranch', label: 'Graph' },
 ];
 
 export function NavBar() {
@@ -75,7 +84,9 @@ export function NavBar() {
         ))}
       </div>
       <div className="navbar-bottom">
-        <button className="navbar-item" title="Settings">{icons.settings}</button>
+        <button className="navbar-item navbar-gear" title="Settings">
+          {icons.gear}
+        </button>
         <div className="navbar-avatar">S</div>
       </div>
     </nav>

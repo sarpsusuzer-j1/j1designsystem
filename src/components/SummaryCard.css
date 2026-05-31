@@ -2,13 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 76px;
-  padding: 0 16px;
-  background: var(--neutral-white);
-  border: 1px solid var(--neutral-border);
-  border-radius: var(--radius-8);
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #D8DAD9;
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
   flex: 1;
   min-width: 0;
+  box-sizing: border-box;
 }
 
 .summary-card__content {
@@ -19,22 +20,24 @@
 
 .summary-card__value {
   font-size: 20px;
-  font-weight: var(--font-weight-semibold);
-  color: var(--eclipse-600);
-  line-height: 1.2;
+  font-weight: 600;
+  color: #1F2622;
+  line-height: 25.2px;
+  font-family: var(--font-family);
 }
 
 .summary-card__label {
-  font-size: 13px;
-  font-weight: var(--font-weight-regular);
-  color: var(--eclipse-300);
-  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 400;
+  color: #828987;
+  line-height: 17.4px;
+  font-family: var(--font-family);
 }
 
 .summary-card__icon {
   width: 44px;
   height: 44px;
-  border-radius: var(--radius-8);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
