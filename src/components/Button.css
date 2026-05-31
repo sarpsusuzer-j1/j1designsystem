@@ -1,0 +1,55 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: var(--radius-6);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, border-color 0.15s;
+  border: 1px solid transparent;
+}
+
+.btn--black-40 {
+  height: 40px;
+  padding: 0 16px;
+  font-size: 14px;
+  background: var(--eclipse-900);
+  color: var(--neutral-white);
+}
+
+.btn--black-40:hover {
+  background: var(--eclipse-700);
+}
+
+.btn--outline-40 {
+  height: 40px;
+  padding: 0 16px;
+  font-size: 14px;
+  background: var(--neutral-white);
+  color: var(--eclipse-600);
+  border-color: var(--neutral-border);
+}
+
+.btn--outline-40:hover {
+  background: var(--eclipse-50);
+}
+
+.btn--outline-32 {
+  height: 32px;
+  padding: 0 12px;
+  font-size: 13px;
+  background: var(--neutral-white);
+  color: var(--eclipse-600);
+  border-color: var(--neutral-border);
+}
+
+.btn--outline-32:hover {
+  background: var(--eclipse-50);
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+}

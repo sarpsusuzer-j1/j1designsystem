@@ -1,0 +1,40 @@
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-prefix {
+  position: absolute;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  color: var(--eclipse-300);
+  pointer-events: none;
+}
+
+.input {
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--neutral-border);
+  border-radius: var(--radius-6);
+  background: var(--neutral-white);
+  font-family: var(--font-family);
+  font-size: 14px;
+  color: var(--eclipse-600);
+  outline: none;
+  transition: border-color 0.15s;
+  width: 100%;
+}
+
+.input--has-prefix {
+  padding-left: 36px;
+}
+
+.input::placeholder {
+  color: var(--eclipse-300);
+}
+
+.input:focus {
+  border-color: var(--eclipse-400);
+}

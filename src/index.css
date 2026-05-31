@@ -1,0 +1,20 @@
+@import './tokens.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--font-family);
+  font-size: 14px;
+  color: var(--eclipse-600);
+  background: var(--neutral-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  height: 100%;
+}

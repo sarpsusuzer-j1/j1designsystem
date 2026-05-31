@@ -1,0 +1,33 @@
+.slider-tab {
+  display: inline-flex;
+  align-items: center;
+  background: var(--eclipse-50);
+  border-radius: var(--radius-full);
+  padding: 3px;
+  gap: 2px;
+}
+
+.slider-tab__item {
+  height: 34px;
+  padding: 0 16px;
+  border-radius: var(--radius-full);
+  border: none;
+  background: transparent;
+  color: var(--eclipse-400);
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.slider-tab__item:hover {
+  color: var(--eclipse-600);
+}
+
+.slider-tab__item--active {
+  background: var(--neutral-white);
+  color: var(--eclipse-600);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}

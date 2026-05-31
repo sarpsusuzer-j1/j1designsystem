@@ -1,0 +1,111 @@
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--neutral-border);
+  border-radius: var(--radius-8);
+  background: var(--neutral-white);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* Column widths */
+.table-th--identifier,
+.table-td--identifier { width: 138px; }
+.table-th--name,
+.table-td--name { /* FILL — takes remaining space */ }
+.table-th--owner,
+.table-td--owner { width: 150px; }
+.table-th--catalog,
+.table-td--catalog { width: 128px; }
+.table-th--status,
+.table-td--status { width: 100px; }
+.table-th--state,
+.table-td--state { width: 100px; }
+.table-th--effective,
+.table-td--effective { width: 180px; }
+.table-th--evaluated,
+.table-td--evaluated { width: 130px; }
+
+.table-header-row {
+  background: var(--neutral-bg);
+  border-bottom: 1px solid var(--neutral-border);
+}
+
+.table-th {
+  padding: 0 12px;
+  height: 40px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  color: var(--eclipse-300);
+  font-family: var(--font-family);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table-th-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.table-row {
+  border-bottom: 1px solid var(--neutral-border);
+  transition: background 0.1s;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row:hover {
+  background: var(--eclipse-50);
+}
+
+.table-row--selected {
+  background: var(--eclipse-50);
+}
+
+.table-td {
+  padding: 0 12px;
+  height: 52px;
+  font-size: 13px;
+  color: var(--eclipse-400);
+  font-family: var(--font-family);
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.table-td-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.table-identifier {
+  font-size: 12px;
+  color: var(--eclipse-400);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table-name {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--eclipse-600);
+  font-weight: var(--font-weight-medium);
+}
+
+.table-td--muted {
+  color: var(--eclipse-300);
+  font-size: 12px;
+}
