@@ -1,7 +1,7 @@
 .table-wrapper {
   width: 100%;
   overflow-x: auto;
-  border: 1px solid #D8DAD9;
+  border: 1px solid #EDEDED;
   border-radius: 12px;
   background: #ffffff;
 }
@@ -12,27 +12,27 @@
   table-layout: fixed;
 }
 
-/* Column widths */
+/* Column widths — matches skill spec */
 .table-th--identifier,
-.table-td--identifier { width: 148px; }
+.table-td--identifier { width: 144px; }
 .table-th--name,
 .table-td--name { /* FILL — takes remaining space */ }
 .table-th--owner,
-.table-td--owner { width: 150px; }
+.table-td--owner { width: 144px; }
 .table-th--catalog,
-.table-td--catalog { width: 140px; }
+.table-td--catalog { width: 144px; }
 .table-th--status,
-.table-td--status { width: 90px; }
+.table-td--status { width: 100px; }
 .table-th--state,
-.table-td--state { width: 80px; }
+.table-td--state { width: 100px; }
 .table-th--effective,
-.table-td--effective { width: 170px; }
+.table-td--effective { width: 144px; }
 .table-th--evaluated,
-.table-td--evaluated { width: 130px; }
+.table-td--evaluated { width: 120px; }
 
 .table-header-row {
   background: #FAFAFA;
-  border-bottom: 1px solid #D8DAD9;
+  border-bottom: 1px solid #EDEDED;
 }
 
 .table-th {
@@ -40,7 +40,7 @@
   height: 40px;
   text-align: left;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 400;
   color: #828987;
   font-family: var(--font-family);
   white-space: nowrap;
@@ -55,7 +55,7 @@
 }
 
 .table-row {
-  border-bottom: 1px solid #D8DAD9;
+  border-bottom: 1px solid #EDEDED;
   transition: background 0.1s;
 }
 
@@ -74,7 +74,7 @@
 .table-td {
   padding: 0 12px;
   height: 44px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   color: #5A615E;
   font-family: var(--font-family);
@@ -91,7 +91,7 @@
 .table-identifier {
   font-size: 12px;
   color: #5A615E;
-  font-weight: 500;
+  font-weight: 400;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -102,12 +102,12 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #1F2622;
-  font-weight: 500;
-  font-size: 14px;
+  color: #5A615E;
+  font-weight: 400;
+  font-size: 12px;
 }
 
 .table-td--muted {
   color: #5A615E;
-  font-size: 13px;
+  font-size: 12px;
 }

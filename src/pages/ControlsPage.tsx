@@ -264,20 +264,20 @@ export function ControlsPage() {
           iconBg="#F1F2F1"
         />
         <SummaryCard
-          value="80"
-          label="Failing controls"
-          icon={<FailIcon />}
-          iconBg="#F1F2F1"
-        />
-        <SummaryCard
-          value="10"
+          value="10 controls"
           label="High priority failing"
           icon={<PriorityIcon />}
           iconBg="#F1F2F1"
         />
         <SummaryCard
-          value="10"
-          label="Impacted frameworks"
+          value="80 controls"
+          label="Failing"
+          icon={<FailIcon />}
+          iconBg="#F1F2F1"
+        />
+        <SummaryCard
+          value="10 Frameworks"
+          label="Impacted"
           icon={<FrameworkIcon />}
           iconBg="#F1F2F1"
         />

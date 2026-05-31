@@ -7,7 +7,7 @@
   background: #ffffff;
 }
 
-/* Page Content Header */
+/* Page Content Header — no border-bottom per skill rule */
 .controls-header {
   display: flex;
   align-items: center;
@@ -15,13 +15,12 @@
   height: 64px;
   padding: 16px 20px;
   background: #ffffff;
-  border-bottom: 1px solid #D8DAD9;
   flex-shrink: 0;
 }
 
 .controls-title {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   color: #1F2622;
   font-family: var(--font-family);
   margin: 0;
@@ -51,34 +50,31 @@
   background: #F1FFBD;
 }
 
-/* Toolbar Row */
+/* Toolbar Row — no border */
 .controls-toolbar-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 56px;
-  padding: 10px 20px;
-  border-bottom: 1px solid #D8DAD9;
+  padding: 8px 20px;
   flex-shrink: 0;
 }
 
-/* Stat cards */
+/* Stat cards — no border */
 .controls-stats {
   display: flex;
-  gap: 12px;
+  gap: 16px;
   padding: 16px 20px;
-  border-bottom: 1px solid #D8DAD9;
   flex-shrink: 0;
 }
 
-/* Filter + Search row */
+/* Filter + Search row — no border */
 .controls-filter-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 56px;
-  padding: 8px 20px;
-  border-bottom: 1px solid #D8DAD9;
+  padding: 12px 20px;
   flex-shrink: 0;
 }
 
@@ -88,7 +84,7 @@
 
 /* Table section */
 .controls-table-section {
-  padding: 20px;
+  padding: 16px 20px 16px;
   flex: 1;
 }
 
@@ -96,7 +92,6 @@
 .controls-pagination {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   padding: 12px 20px 20px;
   flex-shrink: 0;
 }
