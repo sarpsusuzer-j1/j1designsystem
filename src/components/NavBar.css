@@ -23,6 +23,14 @@
   flex-shrink: 0;
 }
 
+.navbar-logo-placeholder {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #F1F2F1;
+  border: 1px solid #EDEDED;
+}
+
 .navbar-items {
   display: flex;
   flex-direction: column;
