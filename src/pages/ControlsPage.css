@@ -1,39 +1,41 @@
+/* Controls Page — J1 Design System
+   No section separators. All backgrounds #FFFFFF. No border-bottom between zones.
+*/
 .controls-page {
   display: flex;
   flex-direction: column;
-  gap: 0;
   height: 100%;
   overflow-y: auto;
   background: #ffffff;
 }
 
-/* Page Content Header — no border-bottom per skill rule */
+/* Page Content Header — 64px, title + Ask AI pill, SPACE_BETWEEN */
 .controls-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 64px;
-  padding: 16px 20px;
-  background: #ffffff;
+  padding: 0 20px;
   flex-shrink: 0;
 }
 
+/* Page title: 18px SemiBold Eclipse/600 */
 .controls-title {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   color: #1F2622;
   font-family: var(--font-family);
   margin: 0;
   line-height: 25.2px;
 }
 
+/* Ask AI pill — white bg, lime border, 32px, SemiBold Lime/700 */
 .ask-ai-pill {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   height: 32px;
-  padding-left: 10px;
-  padding-right: 12px;
+  padding: 0 12px 0 10px;
   border-radius: 200px;
   border: 1px solid #F1FFBD;
   background: #ffffff;
@@ -42,8 +44,10 @@
   font-weight: 600;
   color: #5C6E22;
   cursor: pointer;
-  box-shadow: 0px 8px 12px rgba(73,73,73,0.04), 0px 1px 1px rgba(73,73,73,0.03);
-  transition: background 0.15s, box-shadow 0.15s;
+  box-shadow:
+    0px 8px 12px rgba(73, 73, 73, 0.04),
+    0px 1px 1px rgba(73, 73, 73, 0.03);
+  transition: background 0.12s;
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -52,41 +56,42 @@
   background: #F1FFBD;
 }
 
-/* Toolbar Row — no border */
+/* Toolbar row — 40px, Slider Tab + Create button, SPACE_BETWEEN */
 .controls-toolbar-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 56px;
+  min-height: 40px;
   padding: 8px 20px;
   flex-shrink: 0;
 }
 
-/* Stat cards — no border */
+/* Stat cards row */
 .controls-stats {
   display: flex;
   gap: 16px;
-  padding: 16px 20px;
+  padding: 8px 20px 12px;
   flex-shrink: 0;
 }
 
-/* Filter + Search row — no border */
+/* Filter row — 40px, Filters button (left) + Search 489px (right), SPACE_BETWEEN */
 .controls-filter-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 56px;
-  padding: 12px 20px;
+  min-height: 40px;
+  padding: 8px 20px;
   flex-shrink: 0;
 }
 
+/* Search input width — 489px per Controls Page screen-references spec */
 .controls-search {
-  width: 420px;
+  width: 489px;
 }
 
 /* Table section */
 .controls-table-section {
-  padding: 16px 20px 16px;
+  padding: 8px 20px 0;
   flex: 1;
 }
 

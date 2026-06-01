@@ -1,3 +1,4 @@
+/* NavBar — 68px collapsed, white bg, Eclipse tokens */
 .navbar {
   width: 68px;
   min-width: 68px;
@@ -6,20 +7,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 12px;
-  padding-left: 12px;
-  padding-right: 12px;
   justify-content: space-between;
+  padding: 20px 12px 12px;
   box-sizing: border-box;
   border-right: 1px solid #EDEDED;
+  flex-shrink: 0;
+}
+
+.navbar-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-height: 0;
 }
 
 .navbar-logo {
-  margin-bottom: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 40px;
+  height: 42px;
   flex-shrink: 0;
 }
 
@@ -31,55 +40,50 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0;
+  gap: 2px;
   flex: 1;
 }
 
+/* Base nav item — 40×40, Eclipse/300 icon color */
 .navbar-item {
   width: 40px;
   height: 40px;
   border-radius: 12px;
   border: none;
   background: transparent;
-  color: #828987;
+  color: #828987; /* Eclipse/300 */
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  box-sizing: border-box;
-  transition: background 0.15s, color 0.15s;
+  padding: 0;
+  transition: background 0.12s ease, color 0.12s ease;
+  flex-shrink: 0;
 }
 
+/* Hover — Eclipse/50 bg, Eclipse/600 icon */
 .navbar-item:hover:not(.navbar-item--active) {
-  background: #F1F2F1;
-  color: #1F2622;
+  background: #F1F2F1; /* Eclipse/50 */
+  color: #1F2622;      /* Eclipse/600 */
 }
 
+/* Active — Eclipse/50 bg + Eclipse/100 border, Eclipse/600 icon */
 .navbar-item--active {
-  background: #F1F2F1;
-  border: 1px solid #D8DAD9;
-  color: #1F2622;
+  background: #F1F2F1; /* Eclipse/50 */
+  border: 1px solid #D8DAD9; /* Eclipse/100 */
+  color: #1F2622;      /* Eclipse/600 */
 }
 
+/* Bottom section — gear + avatar */
 .navbar-bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   flex-shrink: 0;
 }
 
-.navbar-gear {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  width: 40px;
-  height: 40px;
-  color: #828987;
-}
-
+/* Avatar pill */
 .navbar-avatar {
   width: 26px;
   height: 26px;
@@ -94,4 +98,5 @@
   font-family: var(--font-family);
   border: 1px solid #D8DAD9;
   flex-shrink: 0;
+  cursor: pointer;
 }
