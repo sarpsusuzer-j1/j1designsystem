@@ -1,19 +1,17 @@
 import './Table.css';
 import { Checkbox } from './Checkbox';
 import { Badge } from './Badge';
-import type { BadgeVariant } from './Badge';
 
-// Controls page row — verified column spec from screen-references.md
 export interface ControlRow {
   id: string;
   identifier: string;
   name: string;
   owner: string;
-  framework: string;
+  catalog: string;
   status: 'pass' | 'fail' | null;
   state: 'live' | 'draft';
-  priority: 'critical' | 'high' | 'medium' | 'low' | null;
-  lastUpdated: string | null;
+  effectiveStatus: 'no-datapoints' | 'no-tests' | null;
+  evaluated: string | null;
 }
 
 interface TableProps {
@@ -32,21 +30,19 @@ function StateBadge({ state }: { state: ControlRow['state'] }) {
   return <Badge variant={state === 'live' ? 'live' : 'draft'} />;
 }
 
-function PriorityBadge({ priority }: { priority: ControlRow['priority'] }) {
-  if (!priority) return <span className="table-empty">—</span>;
-  const map: Record<string, BadgeVariant> = {
-    critical: 'fail',
-    high: 'warning-tinted',
-    medium: 'warning-tinted',
-    low: 'pass',
-  };
-  const labels: Record<string, string> = {
-    critical: 'Critical',
-    high: 'High',
-    medium: 'Medium',
-    low: 'Low',
-  };
-  return <Badge variant={map[priority]} label={labels[priority]} />;
+function EffectiveStatusBadge({ effectiveStatus }: { effectiveStatus: ControlRow['effectiveStatus'] }) {
+  if (!effectiveStatus) return <span className="table-empty">—</span>;
+  return <Badge variant={effectiveStatus} />;
+}
+
+function OwnerCell({ owner }: { owner: string }) {
+  const initials = owner.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
+  return (
+    <div className="table-owner-cell">
+      <span className="table-owner-avatar">{initials}</span>
+      <span className="table-owner-name">{owner}</span>
+    </div>
+  );
 }
 
 export function Table({ rows, selectedIds, onSelectAll, onSelectRow }: TableProps) {
@@ -58,31 +54,19 @@ export function Table({ rows, selectedIds, onSelectAll, onSelectRow }: TableProp
       <table className="table">
         <thead>
           <tr className="table-header-row">
-            {/* col: Identifier — 144px, checkbox + ID text */}
             <th className="table-th table-col--identifier">
               <div className="table-th-inner">
-                <Checkbox
-                  checked={allSelected}
-                  indeterminate={someSelected}
-                  onChange={onSelectAll}
-                />
+                <Checkbox checked={allSelected} indeterminate={someSelected} onChange={onSelectAll} />
                 <span>Identifier</span>
               </div>
             </th>
-            {/* col: Name — 400px, fills remaining */}
             <th className="table-th table-col--name">Name</th>
-            {/* col: Owner — 144px */}
             <th className="table-th table-col--owner">Owner</th>
-            {/* col: Framework — 144px */}
-            <th className="table-th table-col--framework">Framework</th>
-            {/* col: Status — 100px */}
+            <th className="table-th table-col--catalog">Catalog</th>
             <th className="table-th table-col--status">Status</th>
-            {/* col: State — 100px */}
             <th className="table-th table-col--state">State</th>
-            {/* col: Priority — 144px */}
-            <th className="table-th table-col--priority">Priority</th>
-            {/* col: Last Updated — 144px */}
-            <th className="table-th table-col--last-updated">Last Updated</th>
+            <th className="table-th table-col--effective-status">Effective Status</th>
+            <th className="table-th table-col--evaluated">Evaluated</th>
           </tr>
         </thead>
         <tbody>
@@ -93,18 +77,17 @@ export function Table({ rows, selectedIds, onSelectAll, onSelectRow }: TableProp
             >
               <td className="table-td table-col--identifier">
                 <div className="table-td-inner">
-                  <Checkbox
-                    checked={selectedIds.has(row.id)}
-                    onChange={(c) => onSelectRow(row.id, c)}
-                  />
+                  <Checkbox checked={selectedIds.has(row.id)} onChange={(c) => onSelectRow(row.id, c)} />
                   <span className="table-identifier">{row.identifier}</span>
                 </div>
               </td>
               <td className="table-td table-col--name">
                 <span className="table-name">{row.name}</span>
               </td>
-              <td className="table-td">{row.owner || '—'}</td>
-              <td className="table-td">{row.framework || '—'}</td>
+              <td className="table-td table-col--owner">
+                <OwnerCell owner={row.owner} />
+              </td>
+              <td className="table-td">{row.catalog || '—'}</td>
               <td className="table-td table-td--badge">
                 <StatusBadge status={row.status} />
               </td>
@@ -112,9 +95,9 @@ export function Table({ rows, selectedIds, onSelectAll, onSelectRow }: TableProp
                 <StateBadge state={row.state} />
               </td>
               <td className="table-td table-td--badge">
-                <PriorityBadge priority={row.priority} />
+                <EffectiveStatusBadge effectiveStatus={row.effectiveStatus} />
               </td>
-              <td className="table-td table-td--muted">{row.lastUpdated || '—'}</td>
+              <td className="table-td table-td--muted">{row.evaluated || '—'}</td>
             </tr>
           ))}
         </tbody>

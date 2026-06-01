@@ -13,147 +13,146 @@ import { Table } from '../components/Table';
 import type { ControlRow } from '../components/Table';
 import { Pagination } from '../components/Pagination';
 
-// Controls Page mock data — columns per screen-references.md:
-// Identifier | Name | Owner | Framework | Status | State | Priority | Last Updated
+// Controls Page mock data — columns per Figma screen-references spec:
+// Identifier | Name | Owner | Catalog | Status | State | Effective Status | Evaluated
 const MOCK_DATA: ControlRow[] = [
   {
     id: '1',
     identifier: 'CSF-DE-01',
     name: '(Manual Verification) DE.AE-03: Information is correlated from multiple sources',
     owner: 'Sarp Susuzer',
-    framework: 'JupiterOne',
+    catalog: 'JupiterOne',
     status: 'pass',
     state: 'live',
-    priority: 'low',
-    lastUpdated: '2 days ago',
+    effectiveStatus: 'no-datapoints',
+    evaluated: '9 hours ago',
   },
   {
     id: '2',
     identifier: 'CSF-DE-02',
     name: '(Manual Verification) DE.AE-04: The estimated impact and scope of adverse events are understood',
     owner: 'Sarp Susuzer',
-    framework: 'CIS Controls V8',
+    catalog: 'CIS Controls V8',
     status: 'fail',
     state: 'live',
-    priority: 'high',
-    lastUpdated: '5 hours ago',
+    effectiveStatus: null,
+    evaluated: '9 hours ago',
   },
   {
     id: '3',
     identifier: 'CSF-DE-03',
     name: '(Manual Verification) DE.CM-01: Networks and network services are monitored',
     owner: 'Sarp Susuzer',
-    framework: 'JupiterOne',
-    status: 'fail',
-    state: 'live',
-    priority: 'critical',
-    lastUpdated: '1 day ago',
+    catalog: 'JupiterOne',
+    status: null,
+    state: 'draft',
+    effectiveStatus: 'no-tests',
+    evaluated: null,
   },
   {
     id: '4',
     identifier: 'CSF-DE-04',
     name: '(Manual Verification) DE.CM-02: The physical environment is monitored',
     owner: 'Sarp Susuzer',
-    framework: 'CIS Controls V8',
-    status: null,
-    state: 'draft',
-    priority: null,
-    lastUpdated: null,
+    catalog: 'JupiterOne',
+    status: 'pass',
+    state: 'live',
+    effectiveStatus: 'no-datapoints',
+    evaluated: '9 hours ago',
   },
   {
     id: '5',
     identifier: 'CSF-DE-05',
     name: '(Manual Verification) DE.CM-03: Personnel activity and technology usage are monitored',
     owner: 'Sarp Susuzer',
-    framework: 'JupiterOne',
+    catalog: 'CIS Controls V8',
     status: 'fail',
     state: 'live',
-    priority: 'high',
-    lastUpdated: '3 days ago',
+    effectiveStatus: null,
+    evaluated: '9 hours ago',
   },
   {
     id: '6',
     identifier: 'CSF-DE-06',
     name: '(Manual Verification) DE.CM-06: External service provider activities are monitored',
     owner: 'Sarp Susuzer',
-    framework: 'CIS Controls V8',
-    status: 'pass',
-    state: 'live',
-    priority: 'medium',
-    lastUpdated: '6 hours ago',
+    catalog: 'JupiterOne',
+    status: null,
+    state: 'draft',
+    effectiveStatus: 'no-tests',
+    evaluated: null,
   },
   {
     id: '7',
     identifier: 'CSF-DE-07',
     name: '(Manual Verification) DE.CM-07: Monitoring for unauthorized personnel, connections, and software',
     owner: 'Sarp Susuzer',
-    framework: 'JupiterOne',
-    status: 'fail',
+    catalog: 'JupiterOne',
+    status: 'pass',
     state: 'live',
-    priority: 'critical',
-    lastUpdated: '1 week ago',
+    effectiveStatus: 'no-datapoints',
+    evaluated: '9 hours ago',
   },
   {
     id: '8',
     identifier: 'CSF-DE-08',
     name: '(Manual Verification) DE.CM-09: Computing hardware and software are monitored',
     owner: 'Sarp Susuzer',
-    framework: 'CIS Controls V8',
-    status: null,
-    state: 'draft',
-    priority: null,
-    lastUpdated: null,
+    catalog: 'CIS Controls V8',
+    status: 'fail',
+    state: 'live',
+    effectiveStatus: null,
+    evaluated: '9 hours ago',
   },
   {
     id: '9',
     identifier: 'CSF-DE-09',
     name: '(Manual Verification) DE.DP-01: Roles and responsibilities for detection are defined',
     owner: 'Sarp Susuzer',
-    framework: 'JupiterOne',
-    status: 'fail',
-    state: 'live',
-    priority: 'medium',
-    lastUpdated: '12 hours ago',
+    catalog: 'JupiterOne',
+    status: null,
+    state: 'draft',
+    effectiveStatus: 'no-tests',
+    evaluated: null,
   },
   {
     id: '10',
     identifier: 'CSF-DE-10',
     name: '(Manual Verification) DE.DP-02: Detection activities comply with applicable requirements',
     owner: 'Sarp Susuzer',
-    framework: 'CIS Controls V8',
+    catalog: 'JupiterOne',
     status: 'pass',
     state: 'live',
-    priority: 'low',
-    lastUpdated: '4 days ago',
+    effectiveStatus: 'no-datapoints',
+    evaluated: '9 hours ago',
   },
   {
     id: '11',
     identifier: 'CSF-DE-11',
     name: '(Manual Verification) DE.DP-04: Event detection information is communicated',
     owner: 'Sarp Susuzer',
-    framework: 'JupiterOne',
+    catalog: 'CIS Controls V8',
     status: 'fail',
     state: 'live',
-    priority: 'high',
-    lastUpdated: '2 hours ago',
+    effectiveStatus: null,
+    evaluated: '9 hours ago',
   },
   {
     id: '12',
     identifier: 'CSF-DE-12',
     name: '(Manual Verification) DE.DP-05: Detection processes are continuously improved',
     owner: 'Sarp Susuzer',
-    framework: 'CIS Controls V8',
-    status: 'fail',
-    state: 'live',
-    priority: 'critical',
-    lastUpdated: '8 hours ago',
+    catalog: 'JupiterOne',
+    status: null,
+    state: 'draft',
+    effectiveStatus: 'no-tests',
+    evaluated: null,
   },
 ];
 
 const PAGE_SIZE = 10;
 
-// --- Inline SVG icons for Ask AI pill ---
-// The Ask AI icon is the JupiterOne planet mark (green sphere + orbital ring)
+// Ask AI icon — JupiterOne planet mark (green sphere + orbital ring)
 const AskAIIcon = () => (
   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="10" cy="10" r="7" fill="#CDEA68"/>
@@ -164,14 +163,12 @@ const AskAIIcon = () => (
   </svg>
 );
 
-// Filter icon for "Filters" outline button
 const FilterIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
     <path d="M2 4H14M4 8H12M6 12H10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
   </svg>
 );
 
-// Search icon for input prefix
 const SearchIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
     <circle cx="6.5" cy="6.5" r="4" stroke="currentColor" strokeWidth="1.5"/>
@@ -179,7 +176,6 @@ const SearchIcon = () => (
   </svg>
 );
 
-// Plus icon for Create button
 const PlusIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
     <path d="M8 3V13M3 8H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>

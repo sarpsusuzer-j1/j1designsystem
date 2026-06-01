@@ -21,7 +21,7 @@ interface BadgeProps {
 
 const LABELS: Partial<Record<BadgeVariant, string>> = {
   pass: 'Pass',
-  fail: 'Fail',
+  fail: '● Fail',
   live: 'Live',
   draft: 'Draft',
   'no-datapoints': '● No Datapoints',
