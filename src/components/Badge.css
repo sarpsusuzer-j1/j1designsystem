@@ -25,26 +25,26 @@
 }
 
 .badge--live {
-  background: #ffffff;
-  color: #0E1612;
-  border-color: #828987;
+  background: #F2F8C9;
+  color: #5C6E22;
+  border-color: transparent;
 }
 
 .badge--draft {
-  background: #ffffff;
-  color: #0E1612;
-  border-color: #828987;
+  background: #F1F2F1;
+  color: #3A413E;
+  border-color: transparent;
 }
 
 .badge--no-datapoints {
-  background: #FF5D2E;
-  color: #ffffff;
+  background: #FFEDE5;
+  color: #A6320A;
   border-color: transparent;
 }
 
 .badge--no-tests {
-  background: #FF5D2E;
-  color: #ffffff;
+  background: #FFEDE5;
+  color: #A6320A;
   border-color: transparent;
 }
 

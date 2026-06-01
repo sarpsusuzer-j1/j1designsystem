@@ -28,7 +28,7 @@
 .btn--outline {
   background: #ffffff;
   color: #0E1612;
-  border: 1.5px solid #EDEDED;
+  border: 1.5px solid #D8DAD9;
 }
 
 .btn--outline:hover {
@@ -38,7 +38,7 @@
 .btn--outline-sm {
   background: #ffffff;
   color: #0E1612;
-  border: 1.5px solid #EDEDED;
+  border: 1.5px solid #D8DAD9;
   height: 32px;
   padding: 0 12px;
   font-size: 13px;
