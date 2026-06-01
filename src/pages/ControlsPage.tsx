@@ -152,14 +152,16 @@ const MOCK_DATA: ControlRow[] = [
 
 const PAGE_SIZE = 10;
 
-// Ask AI icon — JupiterOne planet mark (green sphere + orbital ring)
+// Ask AI icon — JupiterOne J1 planet mark (lime sphere + orbital ring)
 const AskAIIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="10" cy="10" r="7" fill="#CDEA68"/>
-    <ellipse cx="10" cy="11.5" rx="7" ry="3.2" fill="#A8C840" opacity="0.45"/>
-    <ellipse cx="8.5" cy="7" rx="2.5" ry="1.6" fill="white" opacity="0.4" transform="rotate(-18 8.5 7)"/>
-    <ellipse cx="10" cy="10" rx="11.5" ry="3.8" fill="none" stroke="#7BA020" strokeWidth="1.3" transform="rotate(-28 10 10)"/>
-    <path d="M2.8 6.8 Q10 5.6 17.2 7.5" stroke="#CDEA68" strokeWidth="2" fill="none"/>
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="9" cy="9" r="6.5" fill="#CDEA68"/>
+    <ellipse cx="9" cy="9" rx="2.8" ry="6.5" fill="#A8C840" opacity="0.5"/>
+    <line x1="2.5" y1="9" x2="15.5" y2="9" stroke="#7BA020" strokeWidth="0.8" opacity="0.6"/>
+    <line x1="3.2" y1="6.2" x2="14.8" y2="6.2" stroke="#7BA020" strokeWidth="0.6" opacity="0.45"/>
+    <line x1="3.2" y1="11.8" x2="14.8" y2="11.8" stroke="#7BA020" strokeWidth="0.6" opacity="0.45"/>
+    <ellipse cx="9" cy="9" rx="8.5" ry="3.2" fill="none" stroke="#5C6E22" strokeWidth="1.1" transform="rotate(-30 9 9)"/>
+    <ellipse cx="6.8" cy="6.2" rx="1.8" ry="1.1" fill="white" opacity="0.35" transform="rotate(-15 6.8 6.2)"/>
   </svg>
 );
 
@@ -263,7 +265,7 @@ export function ControlsPage() {
 
       {/* ── Filter Row: Filters button (left) + Search 489px (right) ── */}
       <div className="controls-filter-row">
-        <Button variant="outline" icon={<FilterIcon />}>Filters</Button>
+        <Button variant="outline-32" icon={<FilterIcon />}>Filters</Button>
         <div className="controls-search">
           <Input
             placeholder="Search controls..."

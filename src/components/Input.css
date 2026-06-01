@@ -17,11 +17,11 @@
 .input {
   height: 40px;
   padding: 0 14px;
-  border: 1px solid #EDEDED;
+  border: 1px solid #D8DAD9;
   border-radius: 12px;
   background: #ffffff;
   font-family: var(--font-family);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   color: #1F2622;
   outline: none;

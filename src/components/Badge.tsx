@@ -20,12 +20,12 @@ interface BadgeProps {
 }
 
 const LABELS: Partial<Record<BadgeVariant, string>> = {
-  pass: 'Pass',
+  pass: '● Pass',
   fail: '● Fail',
-  live: 'Live',
+  live: '● Live',
   draft: 'Draft',
-  'no-datapoints': '● No Datapoints',
-  'no-tests': '● No Tests',
+  'no-datapoints': 'No Datapoints',
+  'no-tests': 'No Tests',
 };
 
 export function Badge({ variant, label }: BadgeProps) {

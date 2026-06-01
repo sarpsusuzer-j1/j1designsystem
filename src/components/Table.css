@@ -6,7 +6,7 @@
 .table-wrapper {
   width: 100%;
   overflow-x: auto;
-  border: 1px solid #EDEDED;
+  border: 1px solid #D8DAD9;
   border-radius: 12px;
   background: #ffffff;
 }
@@ -30,7 +30,7 @@
 /* Header row — Eclipse/50 bg, 44px height */
 .table-header-row {
   background: #F1F2F1;
-  border-bottom: 1px solid #EDEDED;
+  border-bottom: 1px solid #D8DAD9;
 }
 
 /* Header cell text — 12px SemiBold Eclipse/700 (#0E1612) — KIT VERIFIED */
@@ -57,7 +57,7 @@
 /* Body rows — white bg, 48px height, Eclipse/200 bottom border */
 .table-row {
   background: #ffffff;
-  border-bottom: 1px solid #EDEDED;
+  border-bottom: 1px solid #D8DAD9;
   transition: background 0.1s;
 }
 
