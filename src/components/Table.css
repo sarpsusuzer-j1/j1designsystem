@@ -1,3 +1,8 @@
+/* Table — verified typography from J1-New-UI-KIT (June 2025)
+   Header: 12px SemiBold #0E1612 (Eclipse/700)
+   Body:   14px Regular #3A413E (Eclipse/500)
+   Footer: 12px Regular #5A615E (Eclipse/400)
+*/
 .table-wrapper {
   width: 100%;
   overflow-x: auto;
@@ -12,40 +17,35 @@
   table-layout: fixed;
 }
 
-/* Column widths — matches skill spec */
-.table-th--identifier,
-.table-td--identifier { width: 144px; }
-.table-th--name,
-.table-td--name { /* FILL — takes remaining space */ }
-.table-th--owner,
-.table-td--owner { width: 144px; }
-.table-th--catalog,
-.table-td--catalog { width: 144px; }
-.table-th--status,
-.table-td--status { width: 100px; }
-.table-th--state,
-.table-td--state { width: 100px; }
-.table-th--effective,
-.table-td--effective { width: 144px; }
-.table-th--evaluated,
-.table-td--evaluated { width: 120px; }
+/* Column widths — Controls Page spec: 144+400+144+144+100+100+144+144 = 1320px */
+.table-col--identifier  { width: 144px; }
+.table-col--name        { /* FILL — absorbs remaining width */ }
+.table-col--owner       { width: 144px; }
+.table-col--framework   { width: 144px; }
+.table-col--status      { width: 100px; }
+.table-col--state       { width: 100px; }
+.table-col--priority    { width: 144px; }
+.table-col--last-updated { width: 144px; }
 
+/* Header row — Eclipse/50 bg, 44px height */
 .table-header-row {
-  background: #FAFAFA;
+  background: #F1F2F1;
   border-bottom: 1px solid #EDEDED;
 }
 
+/* Header cell text — 12px SemiBold Eclipse/700 (#0E1612) — KIT VERIFIED */
 .table-th {
-  padding: 0 12px;
-  height: 40px;
+  padding: 0 16px;
+  height: 44px;
   text-align: left;
   font-size: 12px;
-  font-weight: 400;
-  color: #828987;
+  font-weight: 600; /* SemiBold */
+  color: #0E1612;   /* Eclipse/700 */
   font-family: var(--font-family);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  box-sizing: border-box;
 }
 
 .table-th-inner {
@@ -54,7 +54,9 @@
   gap: 8px;
 }
 
+/* Body rows — white bg, 48px height, Eclipse/200 bottom border */
 .table-row {
+  background: #ffffff;
   border-bottom: 1px solid #EDEDED;
   transition: background 0.1s;
 }
@@ -63,25 +65,30 @@
   border-bottom: none;
 }
 
+/* Row hover — Eclipse/50 */
 .table-row:hover {
   background: #F1F2F1;
 }
 
+/* Row selected — Eclipse/50 */
 .table-row--selected {
   background: #F1F2F1;
 }
 
+/* Body cell text — 14px Regular Eclipse/500 (#3A413E) — KIT VERIFIED */
 .table-td {
-  padding: 0 12px;
-  height: 44px;
-  font-size: 12px;
-  font-weight: 400;
-  color: #5A615E;
+  padding: 0 16px;
+  height: 48px;
+  font-size: 14px;   /* NOT 12px */
+  font-weight: 400;  /* Regular */
+  color: #3A413E;    /* Eclipse/500 — NOT #5A615E */
   font-family: var(--font-family);
   vertical-align: middle;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
+/* Identifier cell — flex row with checkbox + text */
 .table-td-inner {
   display: flex;
   align-items: center;
@@ -89,25 +96,39 @@
 }
 
 .table-identifier {
-  font-size: 12px;
-  color: #5A615E;
+  font-size: 14px;
+  color: #3A413E;
   font-weight: 400;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  flex: 1;
 }
 
+/* Name cell — truncate long text */
 .table-name {
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #5A615E;
+  color: #3A413E;
   font-weight: 400;
+  font-size: 14px;
+}
+
+/* Badge cells — align badge left-center */
+.table-td--badge {
+  vertical-align: middle;
+}
+
+/* Last Updated / muted — Eclipse/400 */
+.table-td--muted {
+  color: #5A615E; /* Eclipse/400 */
   font-size: 12px;
 }
 
-.table-td--muted {
-  color: #5A615E;
-  font-size: 12px;
+/* Empty dash placeholder */
+.table-empty {
+  color: #B0B4B2; /* Eclipse/200 */
+  font-size: 14px;
 }
